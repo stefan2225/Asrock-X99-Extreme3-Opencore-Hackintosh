@@ -9,20 +9,19 @@ Motherboard: *The Repository name obviously*
 The rest shouldn't matter...
 
 ## What's already setup and mostly done?
-> [Audio] (https://dortania.github.io/OpenCore-Post-Install/universal/audio.html#finding-your-layout-id)
-> [FileVault] (https://dortania.github.io/OpenCore-Post-Install/universal/security.html#filevault)
-> [Boot GUI] (https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html)
-> Fixed RTC for UEFI Ver. P3.70 (SSDT-RTC0-Range.aml)
+[Audio](https://dortania.github.io/OpenCore-Post-Install/universal/audio.html#finding-your-layout-id)
+[FileVault](https://dortania.github.io/OpenCore-Post-Install/universal/security.html#filevault)
+[Boot GUI](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html)
+Fixed RTC for UEFI Ver. P3.70 (SSDT-RTC0-Range.aml)
 Cannot guarantee it will work for any older (or newer if they ever release one) since the RTC Registers are usually different with each and every UEFI Revision
->
-> Sleep should work once you do the required additions I will mention in the next section
+Sleep should work once you do the required additions I will mention in the next section
 
 ## What will I have to setup?
-> [Platform Info] (https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#generate-a-new-serial) and the [ROM] (https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#fixing-rom)
-> [Complete the Emulated NVRAM Setup] (https://dortania.github.io/OpenCore-Post-Install/misc/nvram.html#enabling-emulated-nvram-with-a-nvram-plist)
-> If you are using a Haswell-E CPU change the Fake CPU ID to what is mentioned in the Dortania [Haswell Guide] (https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/haswell-e.html#kernel
-> If you want to boot without an USB you should follow [this] (https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html#grabbing-opencore-off-the-usb) guide too
-> USB Mapping (more about this in the next Section)
+[Platform Info](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#generate-a-new-serial) and the [ROM](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#fixing-rom)
+[Complete the Emulated NVRAM Setup](https://dortania.github.io/OpenCore-Post-Install/misc/nvram.html#enabling-emulated-nvram-with-a-nvram-plist)
+If you are using a Haswell-E CPU change the Fake CPU ID to what is mentioned in the Dortania [Haswell Guide](https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/haswell-e.html#kernel
+If you want to boot without an USB you should follow [this](https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html#grabbing-opencore-off-the-usb) guide too
+USB Mapping (more about this in the next Section)
 
 ## How can I setup the USB Map for my System?
 If you are lazy and have the same amount of front USB ports (2) as me, you can use use my USBMap.kext I placed in the root directory of this repository, place it in your the kext folder and then just enable the USBMap entry in the plist (you only have make you own USBMap.kext if you have a different amount of front USB ports).
@@ -35,7 +34,7 @@ DevirtualiseMmio was disabled to get the system to boot any further and a custom
 ## If you find any mistakes or want to add any improvements to this guide feel free to create an issue or open a pull request.
 
 ## Thanks to:
-[The OpenCore team] (https://github.com/acidanthera/) for creating OpenCore
-[CorpNewt] (https://github.com/corpnewt) and his utilities that make creating Hackintosh Configs in general far easier than previously.
+[The OpenCore team](https://github.com/acidanthera/) for creating OpenCore
+[CorpNewt](https://github.com/corpnewt) and his utilities that make creating Hackintosh Configs in general far easier than previously.
 The [/r/Hackintosh Paradise Discord server] (https://discord.gg/5B58UbG) for providing support on some issues I experience while creating this config.
-Thanks to [this] (https://www.reddit.com/r/hackintosh/comments/fomna7/x99_upgrade_to_catalina_10154_successfully_but/fm2w62k/) reddit comment helping me figure out the PCI Initialization error
+[this](https://www.reddit.com/r/hackintosh/comments/fomna7/x99_upgrade_to_catalina_10154_successfully_but/fm2w62k/) reddit comment helping me figure out the PCI Initialization error
