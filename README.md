@@ -12,7 +12,7 @@ The OpenCore configuration in this Repo is mostly done, there's only a few thing
 ## What will I have to setup?
 * [Platform Info](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#generate-a-new-serial) and the [ROM](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#fixing-rom)
 * ~~[Complete the Emulated NVRAM Setup](https://dortania.github.io/OpenCore-Post-Install/misc/nvram.html#enabling-emulated-nvram-with-a-nvram-plist)~~
-*  After a bit of trial I have concluded that Nvram works on FW Ver. 3.70, so you can skip this step
+  *  After a bit of trial I have concluded that Nvram works on FW Ver. 3.70, so you can skip this step
 * If you are using a Haswell-E/EP CPU change the Fake CPU ID to what is mentioned in the Dortania [Haswell-E Guide](https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/haswell-e.html#kernel) (If you are using a Broadwell-E/EP CPU you don't need to touch anything)
 * If you want to boot without an USB you should follow [this](https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html#grabbing-opencore-off-the-usb) guide too
 * USB Mapping (more about this in the next Section)
