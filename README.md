@@ -32,7 +32,7 @@ DevirtualiseMmio was disabled to get the system to boot and a custom kernel patc
 ## If you find any mistakes or want to add any improvements to this guide feel free to create an issue or open a pull request.
 
 ## Thanks to:
-* [OpenCore devs](https://github.com/acidanthera/)
+* The [OpenCore devs](https://github.com/acidanthera/)
 * [CorpNewt](https://github.com/corpnewt)
-* The [/r/Hackintosh Paradise Discord server](https://discord.gg/5B58UbG)
-* [This](https://www.reddit.com/r/hackintosh/comments/fomna7/x99_upgrade_to_catalina_10154_successfully_but/fm2w62k/) reddit comment
+* The [/r/Hackintosh Paradise Discord](https://discord.gg/5B58UbG)
+* [This reddit comment](https://www.reddit.com/r/hackintosh/comments/fomna7/x99_upgrade_to_catalina_10154_successfully_but/fm2w62k/)
