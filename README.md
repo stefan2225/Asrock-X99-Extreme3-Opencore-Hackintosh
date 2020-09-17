@@ -1,7 +1,8 @@
 # Asrock X99 Extreme3 Opencore 0.6.0
 The OpenCore configuration in this Repo is mostly done, there's only a few things you *should* change before you can use this for your hackintosh endeavors. I have mostly followed the Dortania Guide for this but there are two exceptions I found out after researching for a while. This was only tested with macOS Catalina 10.15.6, Big Sur updates may follow once it officially releases.
-If you are just here for the PCI Initialization patch I have left a plist in the repository root so you can just copy it over to your existing plist. 
-(Friendly reminder that X99 is a horrible platform in general and that if you want a stable hack please buy something else, even AMD Ryzen was easier to setup that this)
+If you are just here for the PCI Initialization patch I have left a plist in the repository root so you can just copy it over to your existing plist.
+
+<font size="1">(Friendly reminder that X99 is a horrible platform in general and that if you want a stable hack please buy something else, even AMD Ryzen was easier to setup that this)</font>
 
 ## What's already setup and mostly done?
 * [Audio](https://dortania.github.io/OpenCore-Post-Install/universal/audio.html#finding-your-layout-id)
