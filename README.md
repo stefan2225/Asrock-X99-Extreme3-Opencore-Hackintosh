@@ -1,15 +1,16 @@
-# Asrock X99 Extreme3 Opencore 0.6.0
-The OpenCore configuration in this Repo is mostly done, there's only a few things you *should* change before you can use this for your hackintosh endeavors. I have mostly followed the Dortania Guide for this but there are two exceptions I found out after researching for a while. This was only tested with macOS Catalina 10.15.6, Big Sur updates may follow once it officially releases.
-If you are just here for the PCI Initialization patch I have left a plist in the repository root so you can just copy it over to your existing plist.
-
-<font size="1">(Friendly reminder that X99 is a horrible platform in general and that if you want a stable hack please buy something else, even AMD Ryzen was easier to setup that this)</font>
+# !!!!WIP!!!
+# NOT 100% GUARANTEED TO WORK WITH BIG SUR SINCE I DO NOT HAVE THIS HARDWARE ANYMORE, PLEASE TEST ON YOUR OWN HARDWARE!!!
+# ONLY FOR EXPERTS/PEOPLE THAT KNOW WHAT THEY'RE DOING!!! ONLY USE THIS AS A BASE FOR YOUR OWN CONFIGURATION!!!
+# Asrock X99 Extreme3 Hackintosh Config using the OpenCore Bootloader
+The OpenCore configuration in this Repo is mostly done, there's only a few things you *should* change before you can use this for your hackintosh endeavors. I have mostly followed the Dortania Guide for this but there are two exceptions I found out after researching for a while.
+If you are just here for the PCI Initialization patch I have left a plist in the repository root so you can just copy it over to your existing plist (no clue if this patch is still needed or even works for Big Sur).
 
 ## What's already setup and mostly done?
 * [Audio](https://dortania.github.io/OpenCore-Post-Install/universal/audio.html#finding-your-layout-id)
 * [FileVault](https://dortania.github.io/OpenCore-Post-Install/universal/security.html#filevault)
 * [Boot GUI](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html)
 * Fixed RTC for UEFI Revision 3.70 (SSDT-RTC0-Range.aml)
-  * Cannot guarantee it will work for any older Revision (or newer if they ever release one) since the RTC Registers are usually different with each and every UEFI Release
+  * Cannot guarantee it will work for any other Revision since the RTC Registers are usually different with each and every UEFI Release
 * Sleep should work once you do the required additions I will mention in the next section
 
 ## What will I have to setup?
@@ -22,17 +23,15 @@ If you are just here for the PCI Initialization patch I have left a plist in the
 * And any other issue you may encounter such as: [Internal NVMe Drive detected as external](https://www.reddit.com/r/hackintosh/comments/f0cc4t/internal_drives_shown_as_external_opencore_amd/) or other NVMe issues like proper power management (NVMeFix.kext is already included, just enable it)
 
 ## How can I setup the USB Map for my System?
-If you are lazy and have the same amount of front USB 3.0 ports (2) as me, you can use use my USBMap.kext I placed in the root directory of this repository, extract it, place it in your kext folder and then enable the USBMap entry in the plist (you only have make you own USBMap.kext if you have a different amount of front USB ports).
-
-First you'll need to grab [Corpnewt's USBMap Utility](https://github.com/corpnewt/USBMap) and then enable the USB Port Limit Remove patches in the .plist under Kernel>Patch (*These only work for Catalina*) and USBInjectAll.kext under Kernel>Add. Then go ahead and reboot. Now open up the USBMap utility and press D to discover all your USB ports. Now you need an USB 2.0 and 3.0 device. Proceed to plug each of those devices into every USB port and leave it there until the USBMap utility visibly refreshes. After you are done press Q to quit and then just press P to enter the .kext creation section and finally after that press K to build your USB map kext. (If it asks you to automatically it in your EFI folder just press N to dismiss it). Now go and move your finished USB map into your kext folder, disable the USB port limit kernel patches and USBInjectAll.kext and enable the entry for USBMap.kext I have added.
+Please follow the [Dortania USB Mapping Guide](https://dortania.github.io/OpenCore-Post-Install/usb/)
 
 ## What steps differ from the Dortania Haswell-E/Broadwell-E guide?
-DevirtualiseMmio was disabled to get the system to boot and a custom kernel patch I have discovered after some research was added to get past the PCI initialization point.
+DevirtualiseMmio was disabled to get the system to boot and a custom kernel patch I have discovered after some research was added to get past the PCI initialization point on Catalina, however I do not know if this patch is still required on Big Sur so please conduct testing on your own to see if it is still needed.
 
 ## If you find any mistakes or want to add any improvements to this guide feel free to create an issue or open a pull request.
 
 ## Thanks to:
-* The [OpenCore devs](https://github.com/acidanthera/)
+* The [OpenCore developers](https://github.com/acidanthera/)
 * [CorpNewt](https://github.com/corpnewt)
 * The [/r/Hackintosh Paradise Discord](https://discord.gg/5B58UbG)
 * [This reddit comment](https://www.reddit.com/r/hackintosh/comments/fomna7/x99_upgrade_to_catalina_10154_successfully_but/fm2w62k/)
